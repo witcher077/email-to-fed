@@ -1,0 +1,315 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,500,600);
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+$color_1: #FFFFFF;
+$color_2: #b3b3b3;
+$color_3: #4CAF50;
+$color_4: #1a1a1a;
+$color_5: #4d4d4d;
+$color_6: #000000;
+$color_7: #EF3B3A;
+$font-family_1: "Roboto", sans-serif;
+
+$primary-color: #2ecc71;
+
+body {
+    background: url('http://emilcarlsson.se/assets/forest-green-blue-gradient.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    font-family: 'Raleway', sans-serif;
+}
+.header {
+    background-color: var(--header_Bg_color);
+    box-shadow: 0px 6px 10px gray;
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        padding: 0px 50px;
+        align-items: center;
+        @media only screen and (max-width:991px) {
+            padding: 0;
+                    }
+
+    }
+
+    ul {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 40px;
+        @media only screen and (max-width:991px) {
+            display: none;
+            // display: flex;
+            // flex-direction: column;
+            // justify-content: flex-end;
+            // align-items: center;
+
+        }
+
+        li {
+            &:hover {
+                cursor: pointer;
+                color: #04af2f;
+            }
+
+            color: white;
+            font-weight: 600;
+            list-style-type: none;
+
+            #logoutBtn {
+                background-color: red;
+                padding: 10px;
+                border-radius: 4px;
+                border: 0;
+                color: white;
+                font-weight: 600;
+                cursor: pointer;
+
+            }
+
+            .show {
+                display: block;
+            }
+        }
+        
+    }
+    .ham-Burger-container {
+        display: none;
+
+        @media only screen and (max-width:991px) {
+            display: block;
+        }
+
+        #ham-Burger {
+            width: 35px;
+            height: 30px;
+            margin: 10px 10px;
+            position: relative;
+            cursor: pointer;
+            display: inline-block;
+
+            span {
+                background-color: #fff;
+                position: absolute;
+                border-radius: 2px;
+                transition: .3s cubic-bezier(.8, .5, .2, 1.4);
+                width: 100%;
+                height: 4px;
+                transition-duration: 500ms;
+
+                &:nth-child(2) {
+                    top: 13px;
+                    left: 0px;
+                }
+
+                &:nth-child(3) {
+                    bottom: 0px;
+                    left: 0px;
+                }
+            }
+
+            &:not(.open):hover span:nth-child(1) {
+                transform: rotate(-3deg) scaleY(1.1);
+            }
+
+            &:not(.open):hover span:nth-child(2) {
+                transform: rotate(3deg) scaleY(1.1);
+            }
+
+            &:not(.open):hover span:nth-child(3) {
+                transform: rotate(-4deg) scaleY(1.1);
+            }
+
+            &:not(.open):hover span:nth-child(1) {
+                transform: rotate(-3deg) scaleY(1.1);
+            }
+
+            &:not(.open):hover span:nth-child(1) {
+                transform: rotate(-3deg) scaleY(1.1);
+            }
+
+        }
+
+        .open span:nth-child(1) {
+            transform: rotate(45deg);
+            top: 13px;
+        }
+
+        .open span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .open span:nth-child(3) {
+            transform: rotate(-45deg);
+            top: 13px;
+        }
+    }
+}
+.login-page {
+	width: 360px;
+	padding: 8% 0 0;
+	margin: auto;
+}
+.form {
+	position: relative;
+	z-index: 1;
+	background: #FFFFFF;
+	max-width: 360px;
+	margin: 0 auto 100px;
+	padding: 45px;
+	// text-align: center;
+	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    div{
+        span{
+            font-weight: 700;
+        }
+        input {
+            font-family: $font-family_1;
+            outline: 0;
+            background: #f2f2f2;
+            width: 100%;
+            border: 0;
+            margin: 0 0 15px;
+            padding: 15px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+    }
+	
+	button {
+		font-family: $font-family_1;
+		text-transform: uppercase;
+		outline: 0;
+		background: #4CAF50;
+		width: 100%;
+		border: 0;
+		padding: 15px;
+		color: $color_1;
+		font-size: 14px;
+		-webkit-transition: all 0.3 ease;
+		transition: all 0.3 ease;
+		cursor: pointer;
+		&:hover {
+			background: #43A047;
+		}
+		&:active {
+			background: #43A047;
+		}
+		&:focus {
+			background: #43A047;
+		}
+	}
+	.message {
+		margin: 15px 0 0;
+		color: $color_2;
+		font-size: 12px;
+		a {
+			color: $color_3;
+			text-decoration: none;
+		}
+	}
+}
+
+
+
+#productContainer {
+    flex-wrap: wrap;
+    width: 95%;
+    gap: 10px;
+    margin:20px auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+
+      @media only screen and (max-width:767px) {
+          grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+          gap: 10px;
+
+      }
+
+    .card-container {
+      
+        background: #FFF;
+        border-radius: 10px;
+        box-shadow: 0 0 30px rgba(0, 0, 0, .3);
+        -webkit-box-shadow: 0 0 30px rgba(0, 0, 0, .3);
+        overflow: hidden;
+        cursor: pointer;
+
+        #hero-img {
+            width: 100%;
+            height: 150px;
+            background: url('http://emilcarlsson.se/assets/forest.jpg') no-repeat center center;
+            background-size: cover;
+        }
+
+        #profile-img {
+            width: 100px;
+            height: 100px;
+            margin: -50px auto 0 auto;
+            border: 5px solid #fff;
+            background: #fec230 0 0 no-repeat padding-box;
+            box-shadow: 0 0 10px rgba(0,0,0,.161);
+            border-radius: 50%;
+            box-shadow: 0 0 5px rgba(90, 90, 90, .3);
+            font-size: 50px;
+            font-weight: 700;
+
+            img {
+                width: 100%;
+                background: #FFF;
+                border-radius: 50%;
+            }
+        }
+
+        #content {
+            // width: 320px;
+            margin: 0 auto;
+            padding: 0 5px 20px 5px;
+
+            h1 {
+                text-align: center;
+                color: black;
+                font-size: 30px;
+                font-weight: 900;
+                margin: 20px 0 0 0;
+                font-family:"Dancing Script", cursive;;
+                text-shadow: 0 0 10px #54d0f4;
+            }
+            .contact{
+                
+                    .location_info {
+                        font-family: Arial, Helvetica, sans-serif;
+                        border-left: 3px solid blueviolet;
+                        padding: 5px;
+                        font-size: 14px;
+                    }
+                
+            }
+
+            p {
+                font-size: 18px;
+                font-weight: 400;
+                line-height: 1.4;
+                color: #666;
+                margin: 15px 0 40px 0;
+            }
+
+            a {
+                color: #CCC;
+                font-size: 14px;
+                margin: 0 10px;
+                transition: color .3s ease-in-out;
+                -webkit-transition: color .3s ease-in-out;
+
+                &:hover {
+                    color: $primary-color;
+                }
+            }
+
+            
+        }
+    }
+}

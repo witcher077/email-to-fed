@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+</head>
+
+<body>
+    <form id="form">
+        <h1>Add People</h1>
+        <div>
+            <span>ID</span>
+            <input id="id" name="id" class="input" type="number" />
+            <span class="errorMsg" id='errorMsgId'></span>
+        </div>
+        <div>
+            <span>Name</span>
+            <input id="name" name="name" class="input" type="text" />
+            <span class="errorMsg" id='errorMsgname'></span>
+        </div>
+        <div>
+            <span>Email</span>
+            <input id="email" name="email" class="input" type="email" />
+            <span class="errorMsg" id='errorMsgemail'></span>
+        </div>
+        <div>
+            <span>Designation</span>
+            <input id="designation" name="designation" class="input" type="text" />
+            <span class="errorMsg" id='errorMsgdesignation'></span>
+        </div>
+        <div>
+            <span>Date of Joining</span>
+            <input id="date" name="date" class="input" type="date" />
+            <span class="errorMsg" id='errorMsgdate'></span>
+        </div>
+        <div>
+            <button id="submit" name="submit" type="submit">submit</button>
+            <button id="update" name="Update">Update</button>
+        </div>
+    </form>
+    <div>
+     <table>
+        <thead id="headings">
+            <th>Emp. Id</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Designation</th>
+            <th>Date of Joining</th>
+            <th>Operation</th>
+        </thead>
+        <tbody id="body">
+
+        </tbody>
+     </table>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js" integrity="sha512-+k1pnlgt4F1H8L7t3z95o3/KO+o78INEcXTbnoJQ/F2VqDVhWoaiVml/OEHv9HsVgxUaVW+IbiZPUJQfF/YxZw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./script.js">
+
+    </script>
+</body>
+
+</html>

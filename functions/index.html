@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: content-box;
+        }
+        div{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+
+        }
+        li{
+            list-style-type: none;
+            padding: 10px 5px;
+        }
+        li:not(:last-child){
+            border-bottom: 1px solid black;
+        }
+        input,ul{
+            width: 30%;
+        }
+        input{
+            padding: 10px 0;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>
+        <input id='input_box' />
+        <ul id="list">
+
+        </ul>
+    </div>
+
+    <script src="./script.js"></script>
+    <script src="./index.js"></script>
+</body>
+
+</html>

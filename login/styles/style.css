@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Matemasie&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+:root {
+  --formContainer-width: 50%;
+}
+
+@media only screen and (max-width: 992px) {
+  :root {
+    --formContainer-width: 80%;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
+body {
+  background: #3f5efb;
+  background: radial-gradient(circle, #3f5efb 0%, #fc466b 100%);
+}
+
+body .main_container {
+  background-color: white;
+  max-width: var(--formContainer-width);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 50px auto;
+  border-radius: 10px;
+}
+
+@media only screen and (max-width: 992px) {
+  body .main_container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+body .main_container > div {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media only screen and (max-width: 992px) {
+  body .main_container > div {
+    width: 75%;
+  }
+}
+
+body .main_container #signin-form {
+  margin: 20px 20px;
+  gap: 15px;
+  padding: 20px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media only screen and (max-width: 992px) {
+  body .main_container #signin-form {
+    margin: 10px 10px;
+    gap: 15px;
+    padding: 10px 0px;
+    font-size: 15px;
+  }
+  body .main_container #signin-form h1 {
+    font-size: 18px;
+  }
+}
+
+body .main_container #signin-form h1 {
+  text-align: center;
+}
+
+body .main_container #signin-form > * {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body .main_container #signin-form > * > * {
+  display: block;
+}
+
+body .main_container #signin-form > * > *:first-child {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin-bottom: 5px;
+}
+
+body .main_container #signin-form > * > *:nth-child(2) {
+  background-color: #d6d6d6;
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+}
+
+body .main_container #signin-form .login-signup_link {
+  text-decoration: underline;
+  color: blue;
+}
+
+body .main_container #signin-form .errorMsg {
+  color: red;
+}
+
+body .main_container #signin-form .submit-btn {
+  padding: 10px;
+  width: 100%;
+  background-color: #01af01;
+  border: 0;
+  border-radius: 20px;
+}
+/*# sourceMappingURL=style.css.map */
